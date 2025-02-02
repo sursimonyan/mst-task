@@ -1,0 +1,213 @@
+:root {
+  --light-color: #fff;
+  --main-input-border-color: #D6D6D6;
+  --main-input-color: #55565A;
+  --main-input-placeholder-color: rgba(85, 86, 90, 0.7);
+  --main-checkbox-color: #38535D;
+  --main-form-title-color: #405D65;
+  --main-active-color: #D5C9BE;
+  --main-bg: #282829;
+  --banner-bg: #222;
+  --border-color: #55565A;
+  --banner-bg-opacity: rgb(34, 34, 34, 0);
+  --banner-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Prata';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/prata/prata1.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Prata';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/prata/prata2.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--main-bg);
+}
+
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--banner-bg);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--main-active-color);
+  border-radius: 4px;
+}
+
+body.opened-menu {
+  height: 100vh;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.content {
+  max-width: 120rem;
+  width: 100%;
+  margin-inline: auto;
+}
+
+/* Buttons */
+.btn {
+  height: clamp(3.5rem, 5vmax, 6rem);
+  padding-inline: 3.125rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: background-color 240ms;
+}
+
+.btn-main {
+  color: var(--banner-bg);
+  background-color: var(--light-color);
+}
+
+.btn-main:hover {
+  background-color: var(--main-active-color);
+}
+
+.btn-second {
+  height: clamp(3.2rem, 4vmax, 4.875rem);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--main-bg);
+  background-color: var(--light-color);
+  border-radius: 4px;
+  text-transform: uppercase;
+  transition: background-color 240ms;
+}
+
+.btn-second:hover {
+  background-color: var(--main-active-color);
+}
+
+.btn-third {
+  height:clamp(3.6rem, 5.5vmax, 6.25rem);
+  padding-inline: 3.125rem;
+  font-size: 1.5rem;
+  color: var(--light-color);
+  background-color: var(--main-bg);
+  border-radius: 4px;
+  transition: color 240ms, background-color 240ms;
+}
+
+.btn-third:hover {
+  color: var(--main-bg);
+  background-color: var(--main-active-color);
+}
+
+.btn-fourth {
+  height: clamp(3.2rem, 4vmax, 4.875rem);
+  padding-inline: 3.25rem;
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--banner-bg);
+  background-color: var(--light-color);
+  transition: background-color 240ms;
+  text-transform: uppercase;
+}
+
+.btn-fourth:hover {
+  background-color: var(--main-active-color);
+}
+/* /Buttons */
+
+/* Inputs */
+
+.input-main {
+  display: block;
+  width: 100%;
+  padding: 0.875rem 2.375rem;
+  font-size: 1.5rem;
+  color: var(--main-input-color);
+  border: 2px solid var(--main-input-border-color);
+  border-radius: 4px;
+  transition: border-color 240ms;
+}
+
+.input-main::placeholder {
+  color: var(--main-input-placeholder-color);
+}
+
+.input-main:focus {
+  border-color: var(--main-active-color);
+}
+
+.checkbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 1.5rem;
+  padding-inline-start: 2.5rem;
+  font-size: 1.25rem;
+  color: var(--main-input-color);
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkbox-checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 2px solid var(--main-form-title-color);
+  border-radius: 4px;
+}
+
+.checkbox-checkmark:after {
+  content: "";
+  position: absolute;
+  left: 0.25rem;
+  top: -0.25rem;
+  width: 0.5rem;
+  height: 1.25rem;
+  border: solid var(--main-checkbox-color);
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 240ms;
+}
+
+.checkbox input:checked ~ .checkbox-checkmark:after {
+  opacity: 1;
+}
+/* /Inputs */
+
+/* Media */
+@media screen and (max-width: 992px) {
+  .btn, 
+  .btn-second, 
+  .btn-third, 
+  .btn-fourth {
+    padding-inline: 2rem;
+  }
+}

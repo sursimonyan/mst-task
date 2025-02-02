@@ -1,0 +1,77 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fontsicomoon//icomoon.eot?p9sn1j');
+  src:  url('../fontsicomoon//icomoon.eot?p9sn1j#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon/icomoon.ttf?p9sn1j') format('truetype'),
+    url('../fonts/icomoon/icomoon.woff?p9sn1j') format('woff'),
+    url('../fonts/icomoon/icomoon.svg?p9sn1j#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-linkedin:before {
+  content: "\e905";
+  color: #d5c9be;
+}
+.icon-telegram:before {
+  content: "\e906";
+  color: #d5c9be;
+}
+.icon-youtube:before {
+  content: "\e907";
+  color: #d5c9be;
+}
+.icon-instagram:before {
+  content: "\e908";
+  color: #d5c9be;
+}
+.icon-tiktok:before {
+  content: "\e909";
+  color: #d5c9be;
+}
+.icon-facebook:before {
+  content: "\e90a";
+  color: #d5c9be;
+}
+.icon-check {
+  display: flex;
+}
+.icon-check .path1:before {
+  content: "\e900";
+  color: rgb(239, 207, 173);
+}
+.icon-check .path2:before {
+  content: "\e901";
+  margin-left: -1.056640625em;
+  color: rgb(164, 144, 125);
+}
+.icon-check .path3:before {
+  content: "\e902";
+  margin-left: -1.056640625em;
+  color: rgb(255, 255, 255);
+}
+.icon-check .path4:before {
+  content: "\e903";
+  margin-left: -1.056640625em;
+  color: rgb(239, 207, 173);
+}
+.icon-icon:before {
+  content: "\e904";
+  color: #d5c9be;
+}
